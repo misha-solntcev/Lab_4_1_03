@@ -37,8 +37,14 @@ namespace Lab_4_1_03
             Console.WriteLine();
             Console.WriteLine("Измененный массив:");
             (arr[0], arr[index]) = (arr[index], arr[0]);
-            foreach (var item in arr)            
+            foreach (var item in arr)
                 Console.Write(item + " ");
+            Console.WriteLine("\n");
+
+            // Linq
+            var res = arr.Min();
+            int ind = Array.IndexOf(arr, res);
+            Console.WriteLine($"ind = {ind}, res = {res}");
 
             Console.ReadKey();
         }
